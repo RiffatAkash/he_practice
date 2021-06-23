@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="ad.size" content="width=300,height=250" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Countdown Banner by purplePatch</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        user-select: none;
+      }
+      .wrapper {
+        width: 300px;
+        height: 250px;
+        background-image: url("assets/bg.jpg");
+        background-size: 300px 250px;
+        position: relative;
+        cursor: grab;
+        overflow: hidden;
+      }
+      .absolute {
+        position: absolute;
+      }
+      .patch_box {
+        height: 250px;
+        width: 300px;
+        top: 0;
+        left: 0;
+        transition: all 1s ease-in-out;
+      }
+      .model {
+        height: 183px;
+        width: 109px;
+        bottom: 0px;
+        right: 18px;
+        z-index: 2;
+      }
+      .wrapper .buy_now {
+        left: 30px;
+        bottom: 30px;
+        height: 21px;
+        width: 91px;
+      }
+      .wrapper .product {
+        top: 75px;
+        left: 10px;
+        height: 81px;
+        width: 187px;
+      }
+      .copy {
+        height: 12px;
+        width: 135px;
+        left: 10px;
+        z-index: 1;
+        bottom: 70px;
+      }
+      .copy1 {
+        height: 34px;
+        width: 134px;
+        left: 10px;
+        z-index: 1;
+        top: 30px;
+      }
+      .fadeInUpBig {
+        -webkit-animation-name: fadeInUpBig;
+        animation-name: fadeInUpBig;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+      }
+      @keyframes fadeInUpBig {
+        0% {
+          opacity: 0;
+          transform: translateY(200px);
+        }
+        80%,
+        100% {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
+      @keyframes pulse {
+        0% {
+          transform: scaleX(1);
+        }
+        50% {
+          transform: scale3d(0.95, 0.95, 0.95);
+        }
+        to {
+          transform: scaleX(1);
+        }
+      }
+      @keyframes showZoomIn {
+        0% {
+          transform: scale3d(0.5, 0.5, 0.5);
+        }
+        70%,
+        100% {
+          transform: scale3d(1, 1, 1);
+        }
+      }
+      .showZoomIn {
+        animation: showZoomIn;
+        animation-duration: 5s;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+      }
+      .pulse {
+        animation-name: pulse;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+      @keyframes flipInX {
+        0% {
+          transform: perspective(400px) rotateX(90deg);
+          opacity: 0;
+        }
+        40% {
+          transform: perspective(400px) rotateX(-10deg);
+        }
+        70% {
+          transform: perspective(400px) rotateX(10deg);
+        }
+        100% {
+          transform: perspective(400px) rotateX(0deg);
+          opacity: 1;
+        }
+      }
+
+      .flipInX {
+        animation-name: flipInX;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+      }
+      @keyframes lightSpeedIn {
+        0% {
+          transform: translateX(100%) skewX(-30deg);
+          opacity: 0;
+        }
+        60% {
+          transform: translateX(-20%) skewX(0deg);
+          opacity: 1;
+        }
+        80% {
+          transform: translateX(0%) skewX(0deg);
+          opacity: 1;
+        }
+        100% {
+          transform: translateX(0%) skewX(0deg);
+          opacity: 1;
+        }
+      }
+      .lightSpeedIn {
+        animation-name: lightSpeedIn;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-out;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="{CLICK_MACRO}" target="_blank">
+      <div class="wrapper">
+        <div class="patch_box absolute">
+          <div class="model fadeInUpBig absolute">
+            <img src="assets/model.png" alt="" />
+          </div>
+          <div class="product showZoomIn absolute">
+            <img src="assets/products.png" alt="" />
+          </div>
+          <div class="buy_now pulse absolute">
+            <img src="assets/buy now.png" alt="" />
+          </div>
+          <div class="copy lightSpeedIn absolute">
+            <img src="assets/copy.png" alt="" />
+          </div>
+          <div class="copy1 flipInX absolute">
+            <img src="assets/copy1.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </a>
+  </body>
+</html>
